@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class JobType(models.TextChoices):
@@ -24,6 +25,7 @@ class Job(models.Model):
     salary = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     is_active = models.BooleanField(default=True)
     skills = models.ManyToManyField("skills.Skill", related_name="jobs")
+    applicants = models.ManyToManyField(User, related_name="jobs")
 
     class Meta:
         ordering = ("id",)
