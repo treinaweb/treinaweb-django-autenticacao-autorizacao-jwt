@@ -46,6 +46,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "django_filters",
     "rest_framework_simplejwt",
+    "rest_framework_simplejwt.token_blacklist",
 ]
 
 LOCAL_APPS = [
@@ -161,5 +162,5 @@ SIMPLE_JWT = {
         seconds=config("REFRESH_TOKEN_LIFETIME_SECONDS", cast=int)
     ),
     "ROTATE_REFRESH_TOKENS": True,
-    # "BLACKLIST_AFTER_ROTATION": False,
+    "BLACKLIST_AFTER_ROTATION": True,
 }
