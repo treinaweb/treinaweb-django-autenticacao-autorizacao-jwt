@@ -2,18 +2,19 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.shortcuts import get_object_or_404
-from rest_framework.permissions import IsAuthenticated
 
 from core.paginations import TWJobsPagination
 from accounts.serializers import UserSerializer
+from core.permissions import IsAdminUserOrReadOnly
 
 from .models import Job
 from .serializers import JobSerializer
 from .filters import JobFilterSet
+from .permissions import JobApplicantsPermission
 
 
 class JobList(APIView):
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAdminUserOrReadOnly,)
 
     def get(self, request):
         paginator = TWJobsPagination()
@@ -31,6 +32,8 @@ class JobList(APIView):
 
 
 class JobDetail(APIView):
+    permission_classes = (IsAdminUserOrReadOnly,)
+
     def __get_object(self, pk):
         return get_object_or_404(Job, pk=pk, is_active=True)
 
@@ -54,6 +57,8 @@ class JobDetail(APIView):
 
 
 class JobApplicantsView(APIView):
+    permission_classes = (JobApplicantsPermission,)
+
     def __get_object(self, pk):
         return get_object_or_404(Job, pk=pk, is_active=True)
 
