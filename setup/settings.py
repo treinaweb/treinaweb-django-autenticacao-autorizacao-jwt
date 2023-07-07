@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from decouple import config, Csv
 from dj_database_url import parse as dburl
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -151,3 +152,14 @@ REST_FRAMEWORK = {
 
 PAGE_SIZE_QUERY_PARAM = "size"
 MAX_PAGE_SIZE = 100
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(
+        seconds=config("ACCESS_TOKEN_LIFETIME_SECONDS", cast=int)
+    ),
+    "REFRESH_TOKEN_LIFETIME": timedelta(
+        seconds=config("REFRESH_TOKEN_LIFETIME_SECONDS", cast=int)
+    ),
+    "ROTATE_REFRESH_TOKENS": True,
+    # "BLACKLIST_AFTER_ROTATION": False,
+}

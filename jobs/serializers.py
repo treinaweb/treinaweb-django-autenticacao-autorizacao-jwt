@@ -9,7 +9,7 @@ class JobSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Job
-        exclude = ("is_active",)
+        exclude = ("is_active", "applicants")
         extra_kwargs = {
             "title": {"min_length": 10},
             "salary": {"min_value": 1000},
