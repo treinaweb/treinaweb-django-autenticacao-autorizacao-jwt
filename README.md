@@ -1,0 +1,17 @@
+# Direto ao Ponto: Django - Autenticação e Autorização com JWT
+
+Esse repositório contem o código-fonte produzido durante as aulas do direto ao ponto Django - Autenticação e Autorização com JWT da [TreinaWeb](https://treinaweb.com.br/)
+
+## Lista de Commits
+
+| Aula    | Video                                                                | Commit                                                            | Link                                                                                                                                        |
+| ------- | -------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aula 03 | Vídeo 03 - Atualizando os models da aplicação                        | 03:03 - Atualizando os models da aplicação                        | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/a1b3f77e0f4b8e0824b6b4069eda1a489ec54c5c.zip) |
+| Aula 03 | Vídeo 04 - Implementando a rota de cadastro de usuários              | 03:04 - Implementando a rota de cadastro de usuários              | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/3189d1722560149e2616b5b9f47a30c900f16f49.zip) |
+| Aula 03 | Vídeo 05 - Adicionando o djangorestframework-simplejwt ao projeto    | 03:05 - Adicionando o djangorestframework-simplejwt ao projeto    | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/e84b0bfe5cb4edcd7c2ced220e83b947e7d9fb73.zip) |
+| Aula 03 | Vídeo 06 - Implementando a rotas de login                            | 03:06 - Implementando a rotas de login                            | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/86afedb3153380062a5f22bbb7b6e856a6c0bb76.zip) |
+| Aula 03 | Vídeo 07 - Implementando a rota de logout                            | 03:07 - Implementando a rota de logout                            | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/c600c5a7427a8d55432e6f362458bc0fb45f9923.zip) |
+| Aula 03 | Vídeo 08 - Implementando a rota de exibir os dados do usuário logado | 03:08 - Implementando a rota de exibir os dados do usuário logado | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/912be1742ea51189568e519d2209eab422b8fe5a.zip) |
+| Aula 03 | Vídeo 09 - Implementando a rota de atualização de senha              | 03:09 - Implementando a rota de atualização de senha              | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/017c172efc739e7580aebd4ac1e31fd1f3ee6326.zip) |
+| Aula 03 | Vídeo 10 - Implementando as rotas para aplicar a uma vaga            | 03:10 - Implementando as rotas para aplicar a uma vaga            | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/7ed073bde03a9c490b43c4bf3121fdd62c479f4f.zip) |
+| Aula 03 | Vídeo 11 - Trabalhando com permissões no DRF                         | 03:11 - Trabalhando com permissões no DRF                         | [Download](https://github.com/treinaweb/treinaweb-django-autenticacao-autorizacao-jwt/archive/99b51e8859e2b19cffdd3ea096d54a95e19b8fff.zip) |
