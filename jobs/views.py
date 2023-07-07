@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 
 from core.paginations import TWJobsPagination
+from accounts.serializers import UserSerializer
 
 from .models import Job
 from .serializers import JobSerializer
@@ -50,3 +51,18 @@ class JobDetail(APIView):
         job.is_active = False
         job.save()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class JobApplicantsView(APIView):
+    def __get_object(self, pk):
+        return get_object_or_404(Job, pk=pk, is_active=True)
+
+    def post(self, request, pk):
+        job = self.__get_object(pk)
+        job.applicants.add(request.user)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    def get(self, request, pk):
+        job = self.__get_object(pk)
+        serializer = UserSerializer(job.applicants.all(), many=True)
+        return Response(serializer.data)
