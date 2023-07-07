@@ -44,6 +44,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "django_filters",
+    "rest_framework_simplejwt",
 ]
 
 LOCAL_APPS = [
@@ -143,6 +144,9 @@ REST_FRAMEWORK = {
     "COERCE_DECIMAL_TO_STRING": False,
     "DEFAULT_PAGINATION_CLASS": "core.paginations.TWJobsPagination",
     "PAGE_SIZE": 10,
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
 }
 
 PAGE_SIZE_QUERY_PARAM = "size"
